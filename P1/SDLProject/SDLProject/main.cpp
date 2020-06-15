@@ -76,8 +76,24 @@ void Initialize() {
 void ProcessInput() {
     SDL_Event event;
     while (SDL_PollEvent(&event)) {
-        if (event.type == SDL_QUIT || event.type == SDL_WINDOWEVENT_CLOSE) {
-            gameIsRunning = false;
+        switch (event.type) {
+            case SDL_QUIT:
+            case SDL_WINDOWEVENT_CLOSE:
+                gameIsRunning = false;
+                break;
+            case SDL_KEYDOWN:
+                switch (event.key.keysym.sym) {
+                    case SDLK_LEFT:
+                        // Move the player left
+                        break;
+                    case SDLK_RIGHT:
+                        // Move the player right
+                        break;
+                    case SDLK_SPACE:
+                        // Some sort of action
+                        break;
+                }
+                break; // SDL_KEYDOWN
         }
     }
 }
