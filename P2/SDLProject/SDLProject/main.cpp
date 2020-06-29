@@ -31,7 +31,7 @@ glm::vec3 ball_movement = glm::vec3(0, 0, 0);
 glm::vec3 paddle1_movement = glm::vec3(0, 0, 0);
 glm::vec3 paddle2_movement = glm::vec3(0, 0, 0);
 
-float ball_speed = 1.0f;
+float ball_speed = 0.50f;
 float paddle1_speed = 1.0f;
 float paddle2_speed = 1.0f;
 
@@ -156,8 +156,8 @@ void Update() {
 
     
     
-    ball_movement.x = 1.0f;
-    ball_movement.y = 1.0f;
+    ball_movement.x = 4.0f;
+    ball_movement.y = 4.0f;
     
     if (ball_position.x > 4.75 || ball_position.x < -4.75) {
         end = true;
